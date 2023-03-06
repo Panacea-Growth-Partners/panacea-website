@@ -107,7 +107,6 @@ strong {
   font-weight: inherit;
 }
 
-.video,
 .overlay {
   height: 100vh;
   left: 0;
@@ -118,6 +117,12 @@ strong {
 
 .video {
   object-fit: cover;
+  height: 113vh;
+  right: 0;
+  position: fixed;
+  bottom: 0;
+  width: 113vw;
+  max-width: none;
 }
 
 .overlay {

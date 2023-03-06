@@ -11,24 +11,41 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
   <body>
     <video
       class="video"
       src="assets/production ID_3868686.mp4"
       autoplay
-      loop
       muted
     ></video>
 
     <div class="overlay"></div>
 
     <div class="tagline">
-      <p><strong>Accept</strong> no substitutes</p>
+      <p id="tagline">Accept no substitutes</p>
     </div>
 
     <figure class="logo">
       <img src="assets/panacea-type.png" alt="Panacea" />
     </figure>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", () => {
+        const tagline = document.getElementById("tagline");
+
+        const typewriter = new Typewriter(tagline, {
+          loop: true,
+          delay: 75,
+        });
+
+        typewriter
+          .typeString("Accept no substitutes.")
+          .pauseFor(2000)
+          .deleteAll()
+          .start();
+      });
+    </script>
   </body>
 </html>
