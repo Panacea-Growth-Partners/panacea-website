@@ -1,0 +1,147 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+:root {
+  --black: #000;
+  --grey: #b0b0b0;
+  --white: #fff;
+}
+
+html {
+  background-color: var(--black);
+  background: conic-gradient(
+    from 135deg,
+    #000 0deg,
+    #171717 300deg,
+    #371e57 320deg,
+    #103f53 342deg,
+    #3b58ef 360deg
+  );
+  color: var(--grey);
+  font-size: 1em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  min-width: 320px;
+  overflow: hidden;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+strong {
+  font-weight: inherit;
+}
+
+.icon {
+  --d: 160px;
+  height: var(--d);
+  left: calc(calc(100% - var(--d)) / 2);
+  position: fixed;
+  top: calc(calc(100% - var(--d)) / 2);
+  width: var(--d);
+}
+
+.tagline {
+  top: calc(50% + 124px);
+  left: calc(calc(100% - 418px) / 2);
+  position: fixed;
+  transform-origin: top center;
+  width: 418px;
+}
+
+.type {
+  bottom: 60px;
+  left: calc(calc(100% - 170px) / 2);
+  position: fixed;
+  width: 170px;
+}
+
+@media screen and (max-width: 480px) {
+  .tagline {
+    transform: scale(0.8);
+  }
+}
