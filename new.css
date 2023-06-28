@@ -101,11 +101,13 @@ html {
     #103f53 342deg,
     #3b58ef 360deg
   );
+  background-attachment: fixed;
   color: var(--grey);
   font-size: 1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  min-height: 100dvh;
   min-width: 320px;
   overflow: hidden;
   text-rendering: optimizeLegibility;
@@ -153,7 +155,7 @@ a {
 
 .content {
   display: grid;
-  font-size: 30px;
+  font-size: 24px;
   gap: 1.2em;
   line-height: 1.2;
 }
@@ -164,6 +166,7 @@ a {
 
 .links {
   display: flex;
+  font-size: 14px;
   gap: 1em;
   justify-content: flex-end;
 }
@@ -179,26 +182,42 @@ a {
 }
 
 @media screen and (max-width: 699px) {
+  html {
+    overflow-y: auto;
+  }
+
   body {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 36px;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 50px;
-    justify-content: space-between;
+    padding-top: calc(50vh + 120px);
+  }
+
+  .icon {
+    position: absolute;
   }
 
   .type {
     align-items: center;
     display: flex;
     flex-grow: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: calc(50vh - 80px);
+    width: 100%;
+    justify-content: center;
   }
 
   .content {
     align-content: flex-end;
     flex-grow: 1;
     font-size: 24px;
+  }
+
+  .links {
+    justify-content: center;
+    margin-top: 30px;
   }
 }
 
