@@ -93,15 +93,6 @@ th {
 
 html {
   background-color: var(--black);
-  background: conic-gradient(
-    from 135deg,
-    #000 0deg,
-    #171717 300deg,
-    #371e57 320deg,
-    #103f53 342deg,
-    #3b58ef 360deg
-  );
-  background-attachment: fixed;
   color: var(--grey);
   font-size: 1em;
   -moz-osx-font-smoothing: grayscale;
@@ -132,6 +123,30 @@ a {
   text-decoration: none;
 }
 
+.spectrum {
+  background: conic-gradient(
+    from 135deg,
+    #000 0deg,
+    #171717 300deg,
+    #371e57 320deg,
+    #103f53 342deg,
+    #3b58ef 360deg
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.main {
+  min-height: 100vh;
+  position: relative;
+}
+
 .icon {
   --d: 160px;
   height: var(--d);
@@ -139,6 +154,10 @@ a {
   position: fixed;
   top: calc(calc(100% - var(--d)) / 2);
   width: var(--d);
+}
+
+.icon img {
+  position: relative;
 }
 
 .tagline {
@@ -186,7 +205,7 @@ a {
     overflow-y: auto;
   }
 
-  body {
+  .main {
     min-height: 100vh;
     min-height: 100dvh;
     padding: 50px;
